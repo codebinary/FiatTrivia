@@ -1,0 +1,40 @@
+<ol class="breadcrumb animated fadeIn fast">
+   <li><a href="#/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+   <li class="active">Categorias</li>
+</ol>
+
+
+<div class="row">
+{{ categoria.categorias | json}}
+   <div class="col-md-12">
+      <div class="box">
+
+         <div class="box-header with-border">
+            <h3 class="box-title">Categorias</h3>
+         </div>
+         <!-- /.box-header -->
+
+         <div class="box-body">
+         	<table class="table table-bordered">
+         		<thead>
+         			<tr>
+         				<th>ID</th>
+         				<th>Descripcion</th>
+         				<th>Fecha creacion</th>
+         			</tr>
+         		</thead>
+         		<tbody>
+         			<tr ng-repeat="categoria in categorias">
+         				<td>{{ categoria.id }}</td>
+         				<td>{{ categoria.descripcion }}</td>
+         				<td>{{ categoria.create_at }}</td>
+         			</tr>
+         		</tbody>
+         	</table>
+         </div>
+
+
+      </div>
+   </div>
+
+</div>
