@@ -1,10 +1,26 @@
 var app = angular.module('fiatTrivia', [
-			'ngRoute',
+			'ngRoute', 'jcs-autoValidate',
+
 			'fiatTrivia.configuracion',
 			'fiatTrivia.categorias',
 			'fiatTrivia.categoriasCtrl',
 			'fiatTrivia.dashboardCtrl'
 			]);
+
+
+/*==================================================================
+=            Codigo para la traduccion de la validación            =
+==================================================================*/
+angular.module('jcs-autoValidate')
+.run([
+    'defaultErrorMessageResolver',
+    function (defaultErrorMessageResolver) {
+        // To change the root resource file path
+        defaultErrorMessageResolver.setI18nFileRootPath('angular/lib/');
+        defaultErrorMessageResolver.setCulture('es-co');
+    }
+]);
+
 
 app.controller('mainCtrl', ['$scope', 'Configuracion', function($scope, Configuracion){
 	$scope.config = {}

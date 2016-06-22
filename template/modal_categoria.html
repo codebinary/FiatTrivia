@@ -1,0 +1,33 @@
+<div class="modal fade" id="modal_categoria">
+   <div class="modal-dialog">
+      <div class="modal-content">
+
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Categoría</h4>
+         </div>
+         
+         <form action="" name="frmCategoria"
+            ng-submit="guardar(categoriaSel)"
+            novalidate="novalidate">
+
+            <div class="modal-body">
+               <div class="form-group">
+                  <label>Descripción</label>
+                  <input type="text" class="form-control" 
+                     ng-model="categoriaSel.descripcion" required>
+               </div>
+            </div>
+
+
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+
+         </form>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
